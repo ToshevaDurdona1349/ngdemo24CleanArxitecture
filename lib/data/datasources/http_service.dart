@@ -3,13 +3,13 @@ import 'dart:io';
 import 'package:http/http.dart';
 import 'package:http_interceptor/http/http.dart';
 
+import '../../core/constants/constants.dart';
 import '../models/random_users_model.dart';
 import 'http_helper.dart';
 
 class Network{
   static bool isTester = true;
-  static String SERVER_DEV = "randomuser.me";
-  static String SERVER_PROD = "randomuser.me";
+
 
   static final client = InterceptedClient.build(
     interceptors: [HttpInterceptor()],
